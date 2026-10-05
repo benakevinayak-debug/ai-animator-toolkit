@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Animator Toolkit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="brand">AI Animator Toolkit</div>
+    <span class="badge">Open Creative Tool</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">FOR 2D ANIMATORS & CREATORS</p>
+      <h1>Plan animation ideas faster.</h1>
+      <p class="subtitle">
+        A lightweight browser toolkit for organizing animation shots,
+        prompts, timing notes and production ideas.
+      </p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>Shot Planner</h2>
+        <label>Shot description</label>
+        <textarea id="shot" placeholder="e.g. Character walks into the room..."></textarea>
+        <div class="row">
+          <input id="duration" type="number" min="1" value="5" placeholder="Seconds">
+          <select id="camera">
+            <option>Locked Camera</option>
+            <option>Wide Shot</option>
+            <option>Medium Shot</option>
+            <option>Close Up</option>
+          </select>
+        </div>
+        <button onclick="addShot()">Add Shot</button>
+      </article>
+
+      <article class="card">
+        <h2>Prompt Builder</h2>
+        <label>Subject</label>
+        <input id="subject" placeholder="e.g. cartoon character">
+        <label>Action</label>
+        <input id="action" placeholder="e.g. waves and smiles">
+        <label>Style</label>
+        <input id="style" value="clean 2D animation">
+        <button onclick="buildPrompt()">Build Prompt</button>
+        <textarea id="prompt" readonly placeholder="Your prompt will appear here..."></textarea>
+      </article>
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <h2>Production Board</h2>
+        <button class="secondary" onclick="clearShots()">Clear</button>
+      </div>
+      <div id="shots" class="shots">
+        <p class="empty">No shots added yet.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>AI Animator Toolkit · Personal open-source project</footer>
+  <script src="script.js"></script>
+</body>
+</html>

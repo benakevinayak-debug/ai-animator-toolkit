@@ -1,0 +1,78 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: #0d0f12;
+  color: #f5f7fa;
+}
+header {
+  height: 72px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #24282e;
+}
+.brand { font-weight: 800; font-size: 19px; }
+.badge {
+  padding: 7px 12px;
+  border: 1px solid #303640;
+  border-radius: 20px;
+  color: #aeb7c4;
+  font-size: 12px;
+}
+main { width: min(1100px, 90%); margin: 0 auto; padding: 70px 0; }
+.hero { max-width: 760px; margin-bottom: 42px; }
+.eyebrow { color: #78a9ff; font-size: 12px; font-weight: 800; letter-spacing: 1.5px; }
+h1 { font-size: clamp(42px, 7vw, 76px); line-height: .98; margin: 15px 0; }
+.subtitle { color: #aab3bf; font-size: 18px; line-height: 1.6; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.card {
+  background: #15181c;
+  border: 1px solid #292e36;
+  border-radius: 18px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+h2 { margin-top: 0; font-size: 20px; }
+label { display: block; color: #9fa8b4; font-size: 13px; margin: 14px 0 7px; }
+input, textarea, select {
+  width: 100%;
+  border: 1px solid #303640;
+  background: #0f1114;
+  color: #f5f7fa;
+  border-radius: 10px;
+  padding: 12px;
+  font: inherit;
+}
+textarea { min-height: 105px; resize: vertical; }
+.row { display: grid; grid-template-columns: 110px 1fr; gap: 10px; margin-bottom: 12px; }
+button {
+  margin-top: 14px;
+  border: 0;
+  border-radius: 10px;
+  padding: 12px 18px;
+  background: #4f8cff;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+button:hover { opacity: .9; }
+button.secondary { background: #242932; color: #d8dee8; margin: 0; }
+.section-head { display: flex; justify-content: space-between; align-items: center; }
+.shot {
+  display: grid;
+  grid-template-columns: 80px 1fr 100px;
+  gap: 15px;
+  padding: 15px 0;
+  border-top: 1px solid #282d34;
+  align-items: center;
+}
+.number { color: #78a9ff; font-weight: 800; }
+.meta { color: #929ba8; font-size: 12px; }
+.empty { color: #707985; }
+footer { text-align: center; color: #707985; padding: 30px; border-top: 1px solid #24282e; }
+@media (max-width: 750px) {
+  .grid { grid-template-columns: 1fr; }
+  .shot { grid-template-columns: 55px 1fr; }
+}
